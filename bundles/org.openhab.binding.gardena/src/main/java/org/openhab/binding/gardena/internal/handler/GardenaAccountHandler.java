@@ -39,7 +39,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The {@link GardenaAccountHandler} is the handler for a Gardena Smart Home access and connects it to the framework.
+ * The {@link GardenaAccountHandler} is the handler for a Gardena smart system access and connects it to the framework.
  *
  * @author Gerhard Riegler - Initial contribution
  */
@@ -72,7 +72,7 @@ public class GardenaAccountHandler extends BaseBridgeHandler implements GardenaS
     }
 
     /**
-     * Initializes the GardenaSmart account.
+     * Initializes the Gardena smart system account.
      */
     private void initializeGardena() {
         final GardenaAccountHandler instance = this;
@@ -93,7 +93,7 @@ public class GardenaAccountHandler extends BaseBridgeHandler implements GardenaS
     }
 
     /**
-     * Schedules a reinitialization, if Gardea Smart Home account is not reachable at startup.
+     * Schedules a reinitialization, if Gardena smart system account is not reachable at startup.
      */
     private void scheduleReinitialize() {
         scheduler.schedule(() -> {
@@ -119,7 +119,7 @@ public class GardenaAccountHandler extends BaseBridgeHandler implements GardenaS
     }
 
     /**
-     * Returns the Gardena Smart Home implementation.
+     * Returns the Gardena smart system implementation.
      */
     public GardenaSmart getGardenaSmart() {
         return gardenaSmart;

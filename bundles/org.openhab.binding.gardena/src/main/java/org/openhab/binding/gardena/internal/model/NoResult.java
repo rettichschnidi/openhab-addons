@@ -13,7 +13,7 @@
 package org.openhab.binding.gardena.internal.model;
 
 /**
- * Empty class that represents a emtpy result from Gardena Smart Home.
+ * Empty class that represents a emtpy result from Gardena smart system.
  *
  * @author Gerhard Riegler - Initial contribution
  */

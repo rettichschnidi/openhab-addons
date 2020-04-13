@@ -46,70 +46,70 @@ public class GardenaConfig {
     }
 
     /**
-     * Returns the email to connect to Gardena Smart Home.
+     * Returns the email to connect to Gardena smart system.
      */
     public String getEmail() {
         return email;
     }
 
     /**
-     * Sets the email to connect to Gardena Smart Home.
+     * Sets the email to connect to Gardena smart system.
      */
     public void setEmail(String email) {
         this.email = email;
     }
 
     /**
-     * Returns the password to connect to Gardena Smart Home.
+     * Returns the password to connect to Gardena smart system.
      */
     public String getPassword() {
         return password;
     }
 
     /**
-     * Sets the password to connect to Gardena Smart Home.
+     * Sets the password to connect to Gardena smart system.
      */
     public void setPassword(String password) {
         this.password = password;
     }
 
     /**
-     * Returns the session timeout to Gardena Smart Home.
+     * Returns the session timeout to Gardena smart system.
      */
     public int getSessionTimeout() {
         return sessionTimeout;
     }
 
     /**
-     * Sets the session timeout to Gardena Smart Home.
+     * Sets the session timeout to Gardena smart system.
      */
     public void setSessionTimeout(int sessionTimeout) {
         this.sessionTimeout = sessionTimeout;
     }
 
     /**
-     * Returns the connection timeout to Gardena Smart Home.
+     * Returns the connection timeout to Gardena smart system.
      */
     public Integer getConnectionTimeout() {
         return connectionTimeout;
     }
 
     /**
-     * Sets the connection timeout to Gardena Smart Home.
+     * Sets the connection timeout to Gardena smart system.
      */
     public void setConnectionTimeout(Integer connectionTimeout) {
         this.connectionTimeout = connectionTimeout;
     }
 
     /**
-     * Returns the refresh interval to fetch new data from Gardena Smart Home.
+     * Returns the refresh interval to fetch new data from Gardena smart system.
      */
     public Integer getRefresh() {
         return refresh;
     }
 
     /**
-     * Returns the refresh interval to fetch new data from Gardena Smart Home.
+     * Returns the refresh interval to fetch new data from Gardena smart system.
      */
     public void setRefresh(Integer refresh) {
         this.refresh = refresh;

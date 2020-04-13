@@ -77,7 +77,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 /**
- * {@link GardenaSmart} implementation to access Gardena Smart Home.
+ * {@link GardenaSmart} implementation to access Gardena smart system.
  *
  * @author Gerhard Riegler - Initial contribution
  */
@@ -430,7 +430,7 @@ public class GardenaSmartImpl implements GardenaSmart {
     }
 
     /**
-     * Communicates with Gardena Smart Home and parses the result.
+     * Communicates with Gardena smart system and parses the result.
      */
     private synchronized <T> T executeRequest(HttpMethod method, String url, Object contentObject, Class<T> result)
             throws GardenaException {
@@ -494,19 +494,19 @@ public class GardenaSmartImpl implements GardenaSmart {
     }
 
     /**
-     * Verifies the Gardena Smart Home session and reconnects if necessary.
+     * Verifies the Gardena smart system session and reconnects if necessary.
      */
     private void verifySession() throws GardenaException {
         if (session == null
                 || session.getCreated() + (config.getSessionTimeout() * 60000) <= System.currentTimeMillis()) {
-            logger.trace("(Re)logging in to Gardena Smart Home");
+            logger.trace("(Re)logging in to Gardena smart system");
             session = executeRequest(HttpMethod.POST, URL_LOGIN, new GardenaConfigWrapper(config), SessionWrapper.class)
                     .getSession();
         }
     }
 
     /**
-     * Thread which refreshes the data from Gardena Smart Home.
+     * Thread which refreshes the data from Gardena smart system.
      */
     private class RefreshDevicesThread implements Runnable {
         private boolean connectionLost = false;
@@ -530,7 +530,7 @@ public class GardenaSmartImpl implements GardenaSmart {
 
                 if (connectionLost) {
                     connectionLost = false;
-                    logger.info("Connection resumed to Gardena Smart Home with id '{}'", id);
+                    logger.info("Connection resumed to Gardena smart system with id '{}'", id);
                     eventListener.onConnectionResumed();
                 }
 
@@ -563,7 +563,7 @@ public class GardenaSmartImpl implements GardenaSmart {
             } catch (GardenaException ex) {
                 if (!connectionLost) {
                     connectionLost = true;
-                    logger.warn("Connection lost to Gardena Smart Home with id '{}'", id);
+                    logger.warn("Connection lost to Gardena smart system with id '{}'", id);
                     logger.trace("{}", ex.getMessage(), ex);
                     eventListener.onConnectionLost();
                 }

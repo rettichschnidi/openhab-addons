@@ -22,20 +22,20 @@ import org.openhab.binding.gardena.internal.model.Location;
 import org.openhab.binding.gardena.internal.model.Setting;
 
 /**
- * Describes the methods required for the communication with Gardens Smart Home.
+ * Describes the methods required for the communication with Gardena smart system.
  *
  * @author Gerhard Riegler - Initial contribution
  */
 public interface GardenaSmart {
 
     /**
-     * Initializes Gardena Smart Home and loads all devices from all locations.
+     * Initializes Gardena smart system and loads all devices from all locations.
      */
     public void init(String id, GardenaConfig config, GardenaSmartEventListener eventListener,
             ScheduledExecutorService scheduler) throws GardenaException;
 
     /**
-     * Disposes Gardena Smart Home.
+     * Disposes Gardena smart system.
      */
     public void dispose();
 
@@ -55,12 +55,12 @@ public interface GardenaSmart {
     public Device getDevice(String deviceId) throws GardenaException;
 
     /**
-     * Sends a command to Gardena Smart Home.
+     * Sends a command to Gardena smart system.
      */
     public void sendCommand(Device device, GardenaSmartCommandName commandName, Object value) throws GardenaException;
 
     /**
-     * Sends a setting to Gardena Smart Home.
+     * Sends a setting to Gardena smart system.
      */
     public void sendSetting(Setting setting, Object value) throws GardenaException;
 
